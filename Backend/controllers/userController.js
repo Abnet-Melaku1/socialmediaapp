@@ -1,75 +1,43 @@
-const jwt = require("jsonwebtoken");
-const User = require("../models/userModel");
+const Post = require("../models/userModel");
 const bcrypt = require("bcryptjs");
-const registerUser = async (req, res) => {
-  const { name, email, password } = req.body;
-  //Check if user inserts all the credentials to register
-  if (!name || !email || !password) {
-    res.status(400).json("Insert all the necessary informations.");
-  }
-  //Check if ther user exists
-  const isUserExists = await User.findOne({ email });
+const User = require("../models/userModel");
+//update user
 
-  if (isUserExists) {
-    res.status(400).json("user already exists.");
-    //Hash the password
-  }
-  const salt = await bcrypt.genSalt(10);
-  const hashedPassword = await bcrypt.hash(password, salt);
+//_id is the post id and user is the user id
 
-  const user = await User.create({
-    name,
-    email,
-    password: hashedPassword,
-  });
-  if (user) {
-    res.status(201).json({
-      _id: user.id,
-      name: user.name,
-      email: user.email,
-      token: generateToken(user.id),
-    });
-  } else {
-    res.status(400).json("Invalid user data entered.");
-  }
-};
-//Login user
-
-const logInUser = async (req, res) => {
-  const { email, password } = req.body;
-
-  const user = await User.findOne({ email });
-  const isPassword = await bcrypt.compare(password, user.password);
-  try {
-    if (user && isPassword) {
-      res.status(200).json({
-        _id: user.id,
-        name: user.name,
-        email: user.email,
-        token: generateToken(user.id),
-      });
-    } else {
-      res.status(404).json("Invalid credentials");
+const updateUser = async (req, res) => {
+  if (req.user.id === req.params.id) {
+    if (req.body.password) {
+      try {
+        const salt = await bcrypt.genSalt(10);
+        req.body.password = await bcrypt.hash(req.body.password, salt);
+      } catch (err) {
+        return res.status(500).json(err);
+      }
     }
-  } catch (error) {
-    res.status(500).json(error);
+    try {
+      const user = await User.findByIdAndUpdate(req.params.id, req.body, {
+        new: true,
+      });
+      res.status(200).json("account has been updated.");
+    } catch (err) {
+      return res.status(500).json(err);
+    }
+    return res.status(403).json("unauthorized user.");
   }
 };
-//get me
-const getMe = async (req, res) => {
-  const user = await User.findById(req.user.id);
-  const { _id, name, email } = user;
+//const deleter user
 
-  res.status(200).json({
-    id: _id,
-    name,
-    email,
-  });
+const deleteUser = async (req, res) => {
+  if (req.user.id === req.params.id) {
+    try {
+      await User.findByIdAndDelete(req.params.id);
+      return res.status(200).json("user deleted successfully");
+    } catch (err) {
+      return res.status(500).json(err);
+    }
+  } else {
+    res.status(403).json("unauthorized user.");
+  }
 };
-//Generate JWT
-const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRETE, {
-    expiresIn: "30d",
-  });
-};
-module.exports = { registerUser, logInUser, getMe };
+module.exports = { deleteUser, updateUser };

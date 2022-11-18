@@ -4,7 +4,7 @@ const {
   registerUser,
   logInUser,
   getMe,
-} = require("../controllers/userController");
+} = require("../controllers/authController");
 const { protect } = require("../middlewares/authMiddleWare");
 
 // router.get("/", (req, res) => {
