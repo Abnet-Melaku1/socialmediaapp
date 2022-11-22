@@ -23,10 +23,6 @@ const postSchema = new Schema(
       type: Array,
       default: [],
     },
-    savedPosts: {
-      type: Array,
-      default: [],
-    },
   },
   { timestamps: true }
 );

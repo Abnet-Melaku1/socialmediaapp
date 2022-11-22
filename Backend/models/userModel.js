@@ -48,6 +48,10 @@ const userSchema = mongoose.Schema(
       type: String,
       enum: [1, 2, 3],
     },
+    savedPosts: {
+      type: Array,
+      default: [],
+    },
   },
   { timestapms: true }
 );
