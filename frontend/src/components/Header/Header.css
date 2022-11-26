@@ -1,0 +1,22 @@
+.header {
+  min-height: 10vh;
+  background-color: white;
+  border-bottom: 0.5px solid rgba(220, 220, 220, 0.5);
+  border-radius: 10px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 25px;
+}
+h1 {
+  margin: 0;
+  font-weight: 600;
+}
+.logoBlue {
+  color: #a460ed;
+}
+.logoViolet {
+  color: #f07dea;
+}

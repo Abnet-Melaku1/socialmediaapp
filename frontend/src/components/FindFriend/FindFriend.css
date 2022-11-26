@@ -1,0 +1,48 @@
+.findFriend {
+  display: flex;
+
+  background: linear-gradient(
+    180deg,
+    rgba(240, 125, 234, 0.15) 0%,
+    rgba(164, 96, 237, 0.15) 100%
+  );
+  border-radius: 10px;
+  max-width: 300px;
+
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  padding: 15px 20px;
+}
+.btnAndName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.findFriendImg {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.findFriendName {
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.btn {
+  /* background-color: #a582ff; */
+  background: #8758ff;
+
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  width: 100%;
+  border-radius: 7px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}

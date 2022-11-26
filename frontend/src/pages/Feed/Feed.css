@@ -1,0 +1,22 @@
+.feed {
+  display: flex;
+  background: linear-gradient(
+    180deg,
+    rgba(240, 125, 234, 0.15) 0%,
+    rgba(164, 96, 237, 0.15) 100%
+  );
+}
+.shareAndPost {
+  margin-inline: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 0.5;
+}
+.menuFeed {
+  flex: 0.2;
+}
+.suggestionFeed {
+  flex: 0.3;
+  background-color: white;
+}

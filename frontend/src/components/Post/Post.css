@@ -1,0 +1,51 @@
+.post {
+  margin-top: 15px;
+  border: 0.5px solid gainsboro;
+  background: white;
+  width: 100%;
+
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.postOwnerDetails {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+.daysAgo {
+  margin-left: 40px;
+}
+.postOwnerImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.postOwnerName {
+  margin: 0;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+}
+.postCaptionAndImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.postCaption {
+  margin: 0;
+}
+.postImage {
+  width: 550px;
+
+  border-radius: 10px;
+  /* margin: 30px; */
+  padding-inline: auto;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,91 @@
+.loginMainWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.loginText {
+  text-align: center;
+  color: hwb(303 49% 6%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 20vh; */
+  padding-block: 15px;
+}
+.loginText > h1 {
+  font-weight: 700;
+}
+.blue {
+  color: rgba(135, 88, 255, 1);
+}
+.formH2 {
+  color: rgba(135, 88, 255, 1);
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+  vertical-align: middle;
+  padding-block: 10px;
+}
+.svgAndFormContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 80px;
+  margin-top: 25px;
+}
+.socialNetworkSvg {
+  background: rgba(135, 88, 255, 0.75);
+  border-radius: 30px;
+  /* min-height: 80vh; */
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+  flex: 0.3;
+  margin-bottom: 35px;
+}
+.formWrapper {
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  background: white;
+  /* min-height: 80vh; */
+  flex: 0.5;
+  border: 0.1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 35px;
+}
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 35px;
+}
+.emailFormInput,
+.passwordFormInput {
+  width: 90%;
+  padding-block: 20px;
+  border: 0.2px solid rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); */
+  border-radius: 10px;
+}
+input:focus {
+  outline: 1px solid rgba(135, 88, 255, 1);
+}
+.loginBtn {
+  width: 50%;
+  padding: 15px 30px;
+  border: none;
+  background: #f07dea;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+.h2 {
+  color: rgba(135, 88, 255, 0.8);
+  margin: 0;
+}
+.createAccount {
+  color: #f07dea;
+  font-weight: 700;
+  font-size: 1rem;
+}

@@ -1,0 +1,84 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  width: 300px;
+  gap: 30px;
+  background-color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.menuBtn {
+  width: 100%;
+  background-color: white;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+.profile {
+  margin-top: 10px;
+}
+.menuBtn:active {
+  /* transform: scale(1.5);
+  border: 1px solid black;
+  transform: translateX(15px); */
+}
+h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+.dummyPagesTitle {
+  font-weight: 500;
+  font-size: 1.3rem;
+  background: linear-gradient(180deg, #f07dea 20%, #8758ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dummyPages {
+  margin-left: 25px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.pagesLogoAndName {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lrLogo {
+  padding-inline: 15px;
+  background: #8758ff;
+  border: none;
+  padding-block: 5px;
+  border-radius: 5px;
+  color: white;
+}
+.fdLogo {
+  padding-inline: 15px;
+  background: rgb(34, 219, 17);
+  border: none;
+  padding-block: 5px;
+  border-radius: 5px;
+  color: white;
+}
+.lbLogo {
+  padding-inline: 15px;
+  background: #f07dea;
+  border: none;
+  padding-block: 5px;
+  border-radius: 5px;
+  color: white;
+}

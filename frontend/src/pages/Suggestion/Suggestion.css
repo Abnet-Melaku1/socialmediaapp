@@ -1,0 +1,15 @@
+.suggestion {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  margin-inline: 35px;
+}
+.suggestionTitle {
+  margin: 0;
+  font-weight: 500;
+  color: #f07dea;
+  font-size: 1.3rem;
+  text-align: center;
+}

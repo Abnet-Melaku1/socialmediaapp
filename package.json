@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node Backend/server.js",
-    "server": "nodemon Backend/server.js"
+    "server": "nodemon Backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Abnet Melaku",
   "license": "MIT",
@@ -17,5 +19,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.7.2",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
   }
 }

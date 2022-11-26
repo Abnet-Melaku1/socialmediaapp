@@ -1,0 +1,16 @@
+.img {
+  height: 67px;
+  width: 67px;
+  border-radius: 50%;
+}
+.imgWrappper {
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  display: flex;
+  padding: 4px;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(180deg, #f07dea 0%, #8758ff 100%);
+}
